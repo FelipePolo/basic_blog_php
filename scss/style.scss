@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "fajala";
+  src: url(../assets/fonts/fuente.ttf);
+  font-weight: notmal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  background-image: url(../assets/img/cubes.png);
+  padding: 40px;
+}
+#cabecera {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  align-items: center;
+  #logo {
+    align-self: flex-start;
+    margin-bottom: 30px;
+    font-family: "fajala";
+    font-size: 60px;
+    font-weight: 600;
+  }
+  #nav {
+    display: flex;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    width: 98%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    a {
+      color: #000;
+      display: block;
+      margin-left: 20px;
+    }
+    a:hover {
+      color: slategrey;
+    }
+  }
+}
+
+@mixin sombra {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.contenido_principal {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+  #principal {
+    @include sombra;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 65%;
+    padding: 20px;
+    h1{
+      margin-bottom: 10px;
+    }
+    article{
+      a{
+        color: #000;
+        h2{
+          color: rgb(0, 2, 128);
+        }
+        p{
+          max-height: 55px;
+          overflow: hidden;
+        }
+      }
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  #sidebar {
+    @include sombra;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    width: 30%;
+    max-width: 250px;
+    h3 {
+      margin-bottom: 10px;
+      color: rgb(31, 111, 177);
+      font-weight: 600;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      input {
+        border-radius: 5px;
+        height: 20px;
+        margin-bottom: 10px;
+      }
+      button {
+        background-color: rgb(32, 85, 182);
+        border-radius: 5px;
+        color: #fff;
+        height: 30px;
+        width: 60px;
+        align-self: center;
+      }
+    }
+  }
+}
+.hidden {
+  display: none;
+}
+
+#footer{
+  background-color: teal;
+  position: fixed;
+  bottom: 0px;
+}

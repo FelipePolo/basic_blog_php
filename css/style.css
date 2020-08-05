@@ -1,0 +1,22 @@
+@font-face{
+    font-family: "fajala";
+    src:url(../assets/fonts/fuente.ttf);
+    font-weight: notmal;
+    font-style: normal; 
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body{
+    background: red;
+    background-image: url(../assets/img/cubes.png);
+}
+#cabecera{
+    display: flex;
+    flex-direction: colum;
+    margin-top: 50px;
+    background: #21b921
+}
