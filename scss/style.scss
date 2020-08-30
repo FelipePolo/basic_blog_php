@@ -60,9 +60,11 @@ body {
   width: 100%;
   #principal {
     @include sombra;
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     background-color: #fff;
-    width: 65%;
+    width: 73%;
     padding: 20px;
     h1{
       margin-bottom: 10px;
@@ -82,13 +84,40 @@ body {
       display: flex;
       flex-direction: column;
     }
+    #vermas{
+      background-color: #551A8B;
+      color: #fff;
+      font-size: 18px;
+      align-self: flex-end;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 220px;
+      padding: 10px;
+      transition: all 300ms; 
+    }
+    #vermas:hover{
+      background-color: #000280;
+      @include sombra;
+    }
   }
-  #sidebar {
+
+  #login{
     @include sombra;
+    padding: 20px;
+    margin-bottom: 20px;
     border-radius: 10px;
     background-color: #fff;
-    display: flex;
+  }
+  #registrate{
+    @include sombra;
     padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  #sidebar {
+    display: flex;
     flex-direction: column;
     width: 30%;
     max-width: 250px;
@@ -110,8 +139,13 @@ body {
         border-radius: 5px;
         color: #fff;
         height: 30px;
-        width: 60px;
+        padding: 0 10px;
         align-self: center;
+        transition: all 300ms;
+      }
+      button:hover{
+        @include sombra;
+        background-color: #551A8B;
       }
     }
   }
