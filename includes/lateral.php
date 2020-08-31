@@ -1,8 +1,11 @@
 <aside id="sidebar" class="login">
 
-
+  <?php if (!isset($_SESSION['logeado'])) : ?>
   <div id="login" class="bloque">
     <h3>Logeate</h3>
+    <?php if (isset($_SESSION['error_login'])): ?>
+    <p style="color: red"><?php echo $_SESSION['error_login']; ?></p>
+    <?php endif; ?>
     <form action="login.php" method="POST">
       <label for="email">Email:</label>
       <input type="email" name="email" placeholder="example@example.com" />
@@ -13,11 +16,20 @@
       <button type="submit" name="login">Entrar</button>
     </form>
   </div>
+  <?php else: ?>
+  <div id="login" class="bloque">
+    <h3>Bienvenido <?php echo $_SESSION['logeado']['nombre'];?></h3>
+    <form action="login_operaciones.php" method="POST">
+      <button type="submit" name="deslogeo">Deslogearme</button>
+      <button type="submit" name="Datos">Mis Datos</button>
+      <button type="submit" name="Crear">Crear Entrada</button>
+    </form>
+  </div>
+  <?php endif; ?>
 
 
 
   <?php if (!isset($_SESSION['completado'])) : ?>
-
 
   <div id="registrate" class="bloque">
     <h3>Registrate</h3>

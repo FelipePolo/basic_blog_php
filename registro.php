@@ -43,7 +43,7 @@ if (isset($_POST)) {
         $query_insertar = "INSERT INTO usuarios VALUES(null,'$nombre','$apellido','$email','$telefono','$secure_password',CURDATE());";
         // inyectando la query en sql
         $query_result = mysqli_query($conexion, $query_insertar);
-                
+        
         if ($query_result) {
             $_SESSION['completado'] = "El registro se completo exitosamente";
         } else {
