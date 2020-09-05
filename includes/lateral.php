@@ -18,11 +18,12 @@
   </div>
   <?php else: ?>
   <div id="login" class="bloque">
-    <h3>Bienvenido <?php echo $_SESSION['logeado']['nombre'];?></h3>
+    <h3>Bienvenido <?php echo $_SESSION['logeado']['nombre']; ?></h3>
     <form action="login_operaciones.php" method="POST">
       <button type="submit" name="deslogeo">Deslogearme</button>
-      <button type="submit" name="Datos">Mis Datos</button>
-      <button type="submit" name="Crear">Crear Entrada</button>
+      <button type="submit" name="datos">Mis Datos</button>
+      <button type="submit" name="entrada">Crear Categoria</button>
+      <button type="submit" name="categoria">Crear Entrada</button>
     </form>
   </div>
   <?php endif; ?>
